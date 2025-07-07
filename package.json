@@ -3,7 +3,7 @@
     "json-server": "^0.17.4"
   },
   "scripts": {
-    "start": "npx json-server --watch db.json --port $PORT --host 0.0.0.0"
+    "start": "https://d1f440cb-fc40-4a70-ba0e-8a994b535b78-00-1sza5lvku4kaa.pike.replit.dev"
   },
   "engines": {
     "node": "16.x"
