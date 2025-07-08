@@ -1,16 +1,11 @@
-{
-<<<<<<< HEAD
- "name": "mycourse-app",
-=======
-  "name": "mycourse-app",
->>>>>>> b24c2add3ccb8a8f76399a1490f696b23cf3ab8f
-  "version": "1.0.0",
+{ 
+ "name": "mycourse",
+  "version": "1.0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest",
-    "serve-api": "json-server --watch db.json --port 3000"
+    "test": "vitest"  
   },
   "dependencies": {
     "axios": "^1.6.0",

@@ -1,10 +1,6 @@
 <template>
   <div class="beranda">
-<<<<<<< HEAD
-    <h2>Halo, Nurul! 👋</h2>
-=======
-    <h2>Halo! 👋</h2>
->>>>>>> b24c2add3ccb8a8f76399a1490f696b23cf3ab8f
+    <h2>Halo 👋</h2>
     <p>Selamat datang di platform <strong>MyCourse</strong>. Siap untuk belajar hari ini?</p>
 
     <div class="highlight">
