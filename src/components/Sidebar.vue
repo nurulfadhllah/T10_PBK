@@ -19,13 +19,12 @@ export default {
         { name: 'Beranda', route: '/', icon: '🏠' },
         { name: 'Kursus Saya', route: '/kursus-saya', icon: '📘' },
         { name: 'Semua Kursus', route: '/semua-kursus', icon: '📚' },
+        { name: 'Tambah Kursus', route: '/tambah-kursus', icon: '➕' },
         { name: 'Kategori', route: '/kategori', icon: '🗂️' },
         { name: 'Progress', route: '/progress', icon: '📊' },
         { name: 'Sertifikat', route: '/sertifikat', icon: '🎓' },
         { name: 'Profile', route: '/profile', icon: '👤' },
-        { name: 'Tentang', route: '/tentang', icon: 'ℹ️' },
-        { name: 'Tambah Kursus', route: '/tambah-kursus', icon: '➕' }
-
+        { name: 'Tentang', route: '/tentang', icon: 'ℹ️' }
       ]
     }
   }
@@ -91,4 +90,13 @@ export default {
   color: white;
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+}
+
 </style>

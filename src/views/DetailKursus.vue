@@ -33,12 +33,12 @@ const router = useRouter()
 const kursus = ref(null)
 
 onMounted(async () => {
-  const res = await axios.get(`http://localhost:3000/kursus/${route.params.id}`)
+  const res = await axios.get(`https://6cd865ed-7721-496c-b945-969e1452b885-00-214c58z7v8o77.sisko.replit.dev/kursus/${route.params.id}`)
   kursus.value = res.data
 })
 
 async function simpanProgress() {
-  await axios.patch(`http://localhost:3000/kursus/${kursus.value.id}`, {
+  await axios.patch(`https://6cd865ed-7721-496c-b945-969e1452b885-00-214c58z7v8o77.sisko.replit.dev/kursus/${kursus.value.id}`, {
     progress: kursus.value.progress
   })
   alert('Progress diperbarui!')
@@ -55,7 +55,7 @@ async function lanjutkanBelajar() {
 
 async function hapusKursus() {
   if (confirm('Yakin ingin menghapus kursus ini?')) {
-    await axios.delete(`http://localhost:3000/kursus/${kursus.value.id}`)
+    await axios.delete(`https://6cd865ed-7721-496c-b945-969e1452b885-00-214c58z7v8o77.sisko.replit.dev/kursus/${kursus.value.id}`)
     alert('Kursus dihapus.')
     router.push('/kursus-saya')
   }
