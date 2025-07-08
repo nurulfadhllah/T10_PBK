@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
  "name": "mycourse-app",
+=======
+  "name": "mycourse-app",
+>>>>>>> b24c2add3ccb8a8f76399a1490f696b23cf3ab8f
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",

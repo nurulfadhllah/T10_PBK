@@ -39,7 +39,7 @@ export default {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 0.5rem 1rem;
   box-shadow: 2px 0 5px rgba(0,0,0,0.2);
   position: fixed;
   top: 0;
@@ -65,7 +65,7 @@ export default {
 .nav-item {
   display: flex;
   align-items: center;
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 1rem;
   border-radius: 10px;
   text-decoration: none;
   color: white;
