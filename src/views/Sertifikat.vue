@@ -10,7 +10,7 @@
     <ul>
       <li v-for="s in store.sertifikat" :key="s.id">
         📄 <strong>{{ s.namaFile }}</strong>
-        <span class="upload-time">⏱️ {{ new Date().toLocaleDateString() }}</span>
+        <span class="upload-time">{{ new Date().toLocaleDateString() }}</span>
       </li>
     </ul>
   </div>
