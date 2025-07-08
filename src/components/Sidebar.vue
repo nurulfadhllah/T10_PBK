@@ -2,8 +2,8 @@
   <div class="sidebar">
     <h1 class="logo">🎓 <span>MyCourse</span></h1>
     <nav class="nav">
-      <router-link v-for="item in menu" :key="item.name" :to="item.route" 
-      class="nav-item" active-class="active">
+      <router-link v-for="item in menu" :key="item.name" :to="item.route"
+        class="nav-item" active-class="active">
         <span class="icon">{{ item.icon }}</span>
         <span class="label">{{ item.name }}</span>
       </router-link>
@@ -23,7 +23,8 @@ export default {
         { name: 'Progress', route: '/progress', icon: '📊' },
         { name: 'Sertifikat', route: '/sertifikat', icon: '🎓' },
         { name: 'Profile', route: '/profile', icon: '👤' },
-        { name: 'Tentang', route: '/tentang', icon: 'ℹ️' }
+        { name: 'Tentang', route: '/tentang', icon: 'ℹ️' },
+        { name: 'Tambah Kursus', route: '/tambah-kursus', icon: '➕' }
 
       ]
     }
