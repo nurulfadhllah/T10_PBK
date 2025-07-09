@@ -1,18 +1,30 @@
 <template>
-  <div class="sidebar">
+  <aside
+    class="sidebar"
+    :class="{ 'sidebar-hidden': isHidden }"
+  >
     <h1 class="logo">🎓 <span>MyCourse</span></h1>
     <nav class="nav">
-      <router-link v-for="item in menu" :key="item.name" :to="item.route"
-        class="nav-item" active-class="active">
+      <router-link
+        v-for="item in menu"
+        :key="item.name"
+        :to="item.route"
+        class="nav-item"
+        active-class="active"
+        @click="handleClick"
+      >
         <span class="icon">{{ item.icon }}</span>
         <span class="label">{{ item.name }}</span>
       </router-link>
     </nav>
-  </div>
+  </aside>
 </template>
 
 <script>
 export default {
+  props: {
+    isHidden: Boolean
+  },
   data() {
     return {
       menu: [
@@ -27,6 +39,13 @@ export default {
         { name: 'Tentang', route: '/tentang', icon: 'ℹ️' }
       ]
     }
+  },
+  methods: {
+    handleClick() {
+      if (window.innerWidth <= 768) {
+        this.$emit('close') // kirim event ke parent (App.vue)
+      }
+    }
   }
 }
 </script>
@@ -38,11 +57,18 @@ export default {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   min-height: 100vh;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
+  padding-left: 2rem;
   box-shadow: 2px 0 5px rgba(0,0,0,0.2);
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 900;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-hidden {
+  transform: translateX(-100%);
 }
 
 .logo {
@@ -90,13 +116,14 @@ export default {
   color: white;
   font-weight: bold;
 }
+
 @media (max-width: 768px) {
   .sidebar {
     position: absolute;
-    z-index: 1000;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    top: 60px;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    z-index: 200;
   }
 }
-
 </style>
